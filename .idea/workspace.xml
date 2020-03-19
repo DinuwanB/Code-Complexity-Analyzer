@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28cccb79-c88f-4179-8420-fad30af2e2fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" afterDir="false" />
@@ -51,9 +52,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Application.CodeComplexDueToSize">
+  <component name="RunManager" selected="Application.test">
     <configuration name="CodeComplexDueToSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodeComplexDueToSize" />
       <module name="Code Complexity Analyzer" />
@@ -63,6 +64,13 @@
     </configuration>
     <configuration name="FileReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileReader" />
+      <module name="Code Complexity Analyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test" />
       <module name="Code Complexity Analyzer" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.FileReader" />
       </list>
@@ -147,18 +156,31 @@
       <option name="presentableId" value="Default" />
       <updated>1584419285682</updated>
       <workItem from="1584419311450" duration="5089000" />
-      <workItem from="1584557176119" duration="4058000" />
+      <workItem from="1584557176119" duration="5219000" />
+      <workItem from="1584593842374" duration="1058000" />
     </task>
+    <task id="LOCAL-00001" summary="numbers pattern add">
+      <created>1584561984107</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584561984107</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="numbers pattern add" />
+    <option name="LAST_COMMIT_MESSAGE" value="numbers pattern add" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1584428530082">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1584561981638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584428530082" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584561981638" />
     <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1584443201231">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -167,22 +189,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="286" key="GridCell.Tab.0.bottom" timestamp="1584561930681">
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom" timestamp="1584594638033">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584561930681" />
-    <state width="1323" height="286" key="GridCell.Tab.0.center" timestamp="1584561930681">
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584594638033" />
+    <state width="1323" height="209" key="GridCell.Tab.0.center" timestamp="1584594638033">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584561930681" />
-    <state width="1323" height="286" key="GridCell.Tab.0.left" timestamp="1584561930680">
+    <state width="1323" height="209" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584594638033" />
+    <state width="1323" height="209" key="GridCell.Tab.0.left" timestamp="1584594638033">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584561930680" />
-    <state width="1323" height="286" key="GridCell.Tab.0.right" timestamp="1584561930681">
+    <state width="1323" height="209" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584594638033" />
+    <state width="1323" height="209" key="GridCell.Tab.0.right" timestamp="1584594638033">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="286" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584561930681" />
+    <state width="1323" height="209" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584594638033" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584450087077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -215,14 +237,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="179" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1584450086714" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1584443204842">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1584594098859">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584443204842" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584558470906">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584594098859" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584594106361">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584558470906" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584594106361" />
+    <state x="413" y="129" key="extract.method.dialog" timestamp="1584594611439">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="129" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1584594611439" />
     <state x="379" y="0" width="607" height="728" key="find.popup" timestamp="1584428363296">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

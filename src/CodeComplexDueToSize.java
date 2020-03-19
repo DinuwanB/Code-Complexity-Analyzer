@@ -28,6 +28,18 @@ public class CodeComplexDueToSize {
             while (myReader.hasNextLine()) {
                 String data = myReader.next();
                 readWords.add(data);
+
+                Matcher mt;
+                Pattern p2 = Pattern.compile("[0-9][0-9]*");
+                mt = p2.matcher(data);
+                int count = 0;
+                while (mt.find()) {
+                    ++count;
+                    System.out.println("Find num  :" + count *5);
+
+                }
+
+
             }
 
 
@@ -64,15 +76,7 @@ public class CodeComplexDueToSize {
     }
 
     public static void numbersCount(ArrayList<String> readwords){
-        Matcher mt;
-        Pattern p2 = Pattern.compile("[0-9][0-9]*");
-        mt = p2.matcher((CharSequence) readwords);
-        int count = 0;
-        while (mt.find()) {
-            count++;
 
-        }
-        System.out.println(count);
     }
 
 
