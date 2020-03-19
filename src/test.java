@@ -13,9 +13,10 @@ public class test {
 
         keywordsAnalyzer  = ReadClass(filePath);
         operatorAnalyzer  = ReadClass(filePath);
-
+        numbersans(filePath);
         keywordsans(keywordsAnalyzer);
         operatorsans(operatorAnalyzer);
+
 
     }
 
@@ -57,7 +58,18 @@ public class test {
         return OperatorsCount;
     }
 
-    public static void numbersans(){
+    public static void numbersans(String filePath){
+        try {
+            File readData = new File(filePath);
+            Scanner myReader = new Scanner(readData);
+            while (myReader.hasNextLine()) {
+                String data = myReader.next();
 
+
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }

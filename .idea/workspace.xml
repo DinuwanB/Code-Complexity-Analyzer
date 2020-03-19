@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28cccb79-c88f-4179-8420-fad30af2e2fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
@@ -54,6 +53,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.CodeComplexDueToSize">
     <configuration name="CodeComplexDueToSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodeComplexDueToSize" />
@@ -64,6 +68,13 @@
     </configuration>
     <configuration name="FileReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileReader" />
+      <module name="Code Complexity Analyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller" />
       <module name="Code Complexity Analyzer" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,6 +130,7 @@
       <list>
         <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.controller" />
         <item itemvalue="Application.FileReader" />
       </list>
     </recent_temporary>
@@ -157,7 +169,7 @@
       <updated>1584419285682</updated>
       <workItem from="1584419311450" duration="5089000" />
       <workItem from="1584557176119" duration="5219000" />
-      <workItem from="1584593842374" duration="9576000" />
+      <workItem from="1584593842374" duration="21253000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -177,6 +189,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="numbers pattern add" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584613496003">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1584613496003" />
     <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1584561981638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -189,22 +205,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="209" key="GridCell.Tab.0.bottom" timestamp="1584606600355">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1584630517824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584606600355" />
-    <state width="1323" height="209" key="GridCell.Tab.0.center" timestamp="1584606600355">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584630517824" />
+    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1584630517824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584606600355" />
-    <state width="1323" height="209" key="GridCell.Tab.0.left" timestamp="1584606600355">
+    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584630517824" />
+    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1584630517823">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584606600355" />
-    <state width="1323" height="209" key="GridCell.Tab.0.right" timestamp="1584606600355">
+    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584630517823" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1584630517824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584606600355" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584630517824" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584603229077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -253,6 +269,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="0" width="607" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1584428363296" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584629144498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584629144498" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/code$CodeComplexDueToSize.ic" NAME="CodeComplexDueToSize Coverage Results" MODIFIED="1584444846311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

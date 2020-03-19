@@ -22,43 +22,51 @@ public class CodeComplexDueToSize {
                 "%=", "<<=", ">>=", "^="
         ));
 
+
         try {
             File readData = new File("../Dinu/dinu.txt");
             Scanner myReader = new Scanner(readData);
             while (myReader.hasNextLine()) {
                 String data = myReader.next();
+//                System.out.println("-----------------------------  " +data);
                 readWords.add(data);
-
-                CharSequence[] cs = readWords.toArray(new CharSequence[readWords.size()]);
-                Arrays.toString(cs);
-                System.out.println(cs);
-
+                CharSequence cs = readWords.toString();
+                //System.out.println(cs);
                 Matcher mt;
-                Pattern p2 = Pattern.compile("[0-9][0-9]*");
-                mt = p2.matcher(cs);
-                int count = 0;
-                while (mt.find()) {
-                    ++count;
-                    System.out.println("Find num  :" + count *5);
 
+                Pattern p = Pattern.compile(".*\".*\".*");
+                mt = p.matcher(data);
+                if (mt.matches()) {
+                   // System.out.println("What is this : "+ mt);
                 }
 
+                Pattern p2 = Pattern.compile("[0-9][0-9]*");
+                mt = p2.matcher(data);
+                int count = 0;
+                while (mt.find()) {
 
+                   // System.out.println("Find num  :"+ mt );
+                }
+             /**/
+
+
+                Pattern p3 = Pattern.compile("--|\\+\\+|==|-=|\\+=|\\*=|/=|&&|&=|%=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|>=|<=|\\|\\||!|\\||\\^|~|<<|>>|<<<|>>>|->|\\.|::");
+                mt = p3.matcher(data);
+                count = 0;
+                while (mt.find()) {
+                    System.out.println("Find 3  :" + mt );
+                }
+                //System.out.println(readWords );
             }
-
-
-            System.out.println(readWords);
-            //System.out.println(count);
-
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
 
-        numbersCount(readWords);
+        //numbersCount(readWords);
         //my1(readWords,keywords);
-        my2(readWords,operators);
+        //my2(readWords,operators);
 
 
 
@@ -77,10 +85,6 @@ public class CodeComplexDueToSize {
         int a = readwords.size();
         System.out.println(readwords);
         System.out.println(a);
-    }
-
-    public static void numbersCount(ArrayList<String> readwords){
-
     }
 
 
