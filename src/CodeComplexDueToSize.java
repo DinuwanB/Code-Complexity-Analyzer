@@ -37,18 +37,11 @@ public class CodeComplexDueToSize {
         return readWords;
     }
 
-    public static int keywordsans(ArrayList<String> readWords){
+    public static int[] operatorsans(String filePath){
+        ArrayList<String> readWords = new ArrayList<>();
         ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
                 "abstract", "assert", "break", "break", "class", "continue", "default", "enum", "extends", "final", "finally", "implements", "import", "instanceof", "instanceof", "interface", "native", "new", "null", "package", "private", "protected", "public", "return", "static", "strictfp", "super", "synchronized", "this", "throw", "throws", "transient", "try", "void", "volatile", "else"
         ));
-        readWords.retainAll(keywords);
-        int keywordsCount = readWords.size();
-        System.out.println(readWords);
-        System.out.println(keywordsCount);
-        return keywordsCount;
-    }
-
-    public static int[] operatorsans(String filePath){
         int opCount = 0;
         int nuVlCount = 0;
         int strLtCount = 0;
@@ -80,11 +73,23 @@ public class CodeComplexDueToSize {
                     //System.out.println("String Literal  :" + match );
                     strLtCount++;
                 }
+
+                Pattern keywordsPattern = Pattern.compile("[a-zA-Z]+");
+                match = keywordsPattern.matcher(data);
+                while (match.find()){
+                    //System.out.println("String Keywords  :" + match.group() );
+                    readWords.add(match.group());
+                }
             }
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+        System.out.println(readWords);
+        readWords.retainAll(keywords);
+        int keywordsCount = readWords.size();
+        System.out.println(readWords);
+        System.out.println(keywordsCount);
         return new int[] {opCount,nuVlCount,strLtCount};
     }
 

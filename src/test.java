@@ -11,10 +11,10 @@ public class test {
         ArrayList<String> readWords = new ArrayList<String>();
         ArrayList<Integer> numbers = new ArrayList<Integer>();
         ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
-                "abstract","assert","break","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
+                "abstract","assert","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
                 "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
                 "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
-                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else"
+                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else","catch", "true", "else", "default", "return", "null", "this"
         ));
         ArrayList<String> operators = new ArrayList<String>(Arrays.asList(
                 "+", "-", "*", "/", "%", "++", "--", "==", "!=", ">", "<", ">=", "<=", "&&", "||", "!",  "|", "^",
