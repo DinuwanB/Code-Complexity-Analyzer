@@ -10,12 +10,12 @@ public class CodeComplexDueToSize {
     public static void main(String[] args) {
         ArrayList<String> readWords = new ArrayList<String>();
         ArrayList<Integer> numbers = new ArrayList<Integer>();
-//        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
-//                "abstract","assert","break","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
-//                "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
-//                "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
-//                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else"
-//        ));
+        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
+                "abstract","assert","break","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
+                "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
+                "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
+                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else"
+        ));
         ArrayList<String> operators = new ArrayList<String>(Arrays.asList(
                 "+", "-", "*", "/", "%", "++", "--", "==", "!=", ">", "<", ">=", "<=", "&&", "||", "!",  "|", "^",
                 "~", "<<", ">>", ">>>", "<<<" , "->", ".", "::", "+=", "-=", "*=", "/=", "=", ">>>=", "|=", "&=" ,
@@ -29,9 +29,13 @@ public class CodeComplexDueToSize {
                 String data = myReader.next();
                 readWords.add(data);
 
+                CharSequence[] cs = readWords.toArray(new CharSequence[readWords.size()]);
+                Arrays.toString(cs);
+                System.out.println(cs);
+
                 Matcher mt;
                 Pattern p2 = Pattern.compile("[0-9][0-9]*");
-                mt = p2.matcher(data);
+                mt = p2.matcher(cs);
                 int count = 0;
                 while (mt.find()) {
                     ++count;

@@ -56,4 +56,8 @@ public class test {
         System.out.println(OperatorsCount);
         return OperatorsCount;
     }
+
+    public static void numbersans(){
+
+    }
 }
