@@ -10,12 +10,12 @@ public class CodeComplexDueToSize {
     public static void main(String[] args) {
         ArrayList<String> readWords = new ArrayList<String>();
         ArrayList<Integer> numbers = new ArrayList<Integer>();
-        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
-                "abstract","assert","break","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
-                "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
-                "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
-                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else"
-        ));
+//        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
+//                "abstract","assert","break","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
+//                "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
+//                "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
+//                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else"
+//        ));
         ArrayList<String> operators = new ArrayList<String>(Arrays.asList(
                 "+", "-", "*", "/", "%", "++", "--", "==", "!=", ">", "<", ">=", "<=", "&&", "||", "!",  "|", "^",
                 "~", "<<", ">>", ">>>", "<<<" , "->", ".", "::", "+=", "-=", "*=", "/=", "=", ">>>=", "|=", "&=" ,
@@ -53,7 +53,7 @@ public class CodeComplexDueToSize {
         }
 
         numbersCount(readWords);
-        my1(readWords,keywords);
+        //my1(readWords,keywords);
         my2(readWords,operators);
 
 
