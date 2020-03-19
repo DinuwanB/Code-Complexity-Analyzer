@@ -7,7 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28cccb79-c88f-4179-8420-fad30af2e2fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
@@ -21,6 +24,9 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="190" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="code" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -49,6 +55,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -59,6 +66,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.CodeComplexDueToSize">
+    <configuration name="CodeComplexDueToSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CodeComplexDueToSize" />
+      <module name="Code Complexity Analyzer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CodeComplexDueToSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodeComplexDueToSize" />
       <module name="Code Complexity Analyzer" />
@@ -130,6 +144,7 @@
       <list>
         <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.controller" />
         <item itemvalue="Application.FileReader" />
       </list>
@@ -169,7 +184,7 @@
       <updated>1584419285682</updated>
       <workItem from="1584419311450" duration="5089000" />
       <workItem from="1584557176119" duration="5219000" />
-      <workItem from="1584593842374" duration="21253000" />
+      <workItem from="1584593842374" duration="28266000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -205,22 +220,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1584630517824">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1584639308735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584630517824" />
-    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1584630517824">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584639308735" />
+    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1584639308735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584630517824" />
-    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1584630517823">
+    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584639308735" />
+    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1584639308735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584630517823" />
-    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1584630517824">
+    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584639308735" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1584639308735">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584630517824" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584639308735" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584603229077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

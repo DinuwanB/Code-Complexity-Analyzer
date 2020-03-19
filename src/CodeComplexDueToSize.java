@@ -6,89 +6,86 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class CodeComplexDueToSize {
-    public static void main(String[] args) {
+    public static  void main(String[] args) {
+        String filePath = "../Dinu/dinu.txt" ;
+        ArrayList<String> keywordsAnalyzer = new ArrayList<String>();
+
+        //keywordsAnalyzer  = ReadClass(filePath);
+        int result[] = operatorsans(filePath);
+
+
+        System.out.println("Main Class Result 1 : "+result[0]);
+        System.out.println("Main Class Result 2 : "+result[1]);
+        System.out.println("Main Class Result 2 : "+result[2]);
+    }
+
+    public static ArrayList<String> ReadClass(String filePath) {
         ArrayList<String> readWords = new ArrayList<String>();
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
-        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
-                "abstract","assert","break","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
-                "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
-                "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
-                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else"
-        ));
-        ArrayList<String> operators = new ArrayList<String>(Arrays.asList(
-                "+", "-", "*", "/", "%", "++", "--", "==", "!=", ">", "<", ">=", "<=", "&&", "||", "!",  "|", "^",
-                "~", "<<", ">>", ">>>", "<<<" , "->", ".", "::", "+=", "-=", "*=", "/=", "=", ">>>=", "|=", "&=" ,
-                "%=", "<<=", ">>=", "^="
-        ));
-
-
         try {
-            File readData = new File("../Dinu/dinu.txt");
+            File readData = new File(filePath);
             Scanner myReader = new Scanner(readData);
             while (myReader.hasNextLine()) {
                 String data = myReader.next();
-//                System.out.println("-----------------------------  " +data);
                 readWords.add(data);
-                CharSequence cs = readWords.toString();
-                //System.out.println(cs);
-                Matcher mt;
-
-                Pattern p = Pattern.compile(".*\".*\".*");
-                mt = p.matcher(data);
-                if (mt.matches()) {
-                   // System.out.println("What is this : "+ mt);
-                }
-
-                Pattern p2 = Pattern.compile("[0-9][0-9]*");
-                mt = p2.matcher(data);
-                int count = 0;
-                while (mt.find()) {
-
-                   // System.out.println("Find num  :"+ mt );
-                }
-             /**/
-
-
-                Pattern p3 = Pattern.compile("--|\\+\\+|==|-=|\\+=|\\*=|/=|&&|&=|%=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|>=|<=|\\|\\||!|\\||\\^|~|<<|>>|<<<|>>>|->|\\.|::");
-                mt = p3.matcher(data);
-                count = 0;
-                while (mt.find()) {
-                    System.out.println("Find 3  :" + mt );
-                }
-                //System.out.println(readWords );
             }
-
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-        //numbersCount(readWords);
-        //my1(readWords,keywords);
-        //my2(readWords,operators);
-
-
-
-
+        return readWords;
     }
 
-    public static void my1(ArrayList<String> readwords, ArrayList<String> keywords){
-        System.out.println("my1  "+readwords);
-        readwords.retainAll(keywords);
-        System.out.println(readwords);
+    public static int keywordsans(ArrayList<String> readWords){
+        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
+                "abstract", "assert", "break", "break", "class", "continue", "default", "enum", "extends", "final", "finally", "implements", "import", "instanceof", "instanceof", "interface", "native", "new", "null", "package", "private", "protected", "public", "return", "static", "strictfp", "super", "synchronized", "this", "throw", "throws", "transient", "try", "void", "volatile", "else"
+        ));
+        readWords.retainAll(keywords);
+        int keywordsCount = readWords.size();
+        System.out.println(readWords);
+        System.out.println(keywordsCount);
+        return keywordsCount;
     }
 
-    public static void my2(ArrayList<String> readwords, ArrayList<String> operators){
-        System.out.println("my2  " +readwords);
-        readwords.retainAll(operators);
-        int a = readwords.size();
-        System.out.println(readwords);
-        System.out.println(a);
-    }
+    public static int[] operatorsans(String filePath){
+        int opCount = 0;
+        int nuVlCount = 0;
+        int strLtCount = 0;
+        try {
+            File readData = new File(filePath);
+            Scanner myReader = new Scanner(readData);
+            Matcher match;
 
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+
+                Pattern operatorPattern = Pattern.compile("--|\\+\\+|==|-=|\\+=|\\*=|/=|&&|&=|%=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|>=|<=|\\|\\||!|\\||\\^|~|<<|>>|<<<|>>>|->|\\.|::");
+                match = operatorPattern.matcher(data);
+                while (match.find()){
+                    //System.out.println("Operators  :" + match );
+                    opCount++;
+                }
+
+                Pattern numericalPattern = Pattern.compile("\\d+(\\.\\d+)?");
+                match = numericalPattern.matcher(data);
+                while (match.find()){
+                    //System.out.println("Numerical Values  :" + match );
+                    nuVlCount++;
+                }
+
+                Pattern strLiteralPattern = Pattern.compile("\"(.*?)\"");
+                match = strLiteralPattern.matcher(data);
+                while (match.find()){
+                    //System.out.println("String Literal  :" + match );
+                    strLtCount++;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return new int[] {opCount,nuVlCount,strLtCount};
+    }
 
 }
-
-
-
