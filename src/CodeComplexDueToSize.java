@@ -6,7 +6,6 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class CodeComplexDueToSize {
     public static  void main(String[] args) {
         String filePath = "../Dinu/dinu.txt" ;
@@ -16,9 +15,10 @@ public class CodeComplexDueToSize {
         int result[] = operatorsans(filePath);
 
 
-        System.out.println("Main Class Result 1 : "+result[0]);
-        System.out.println("Main Class Result 2 : "+result[1]);
-        System.out.println("Main Class Result 2 : "+result[2]);
+        System.out.println("Operators Result  : "+ result[0]);
+        System.out.println("Numerical Value Result  : "+ result[1]);
+        System.out.println("String Literal Result  : "+ result[2]);
+        System.out.println("Keywords Result  : "+ result[3]);
     }
 
     public static ArrayList<String> ReadClass(String filePath) {
@@ -53,7 +53,7 @@ public class CodeComplexDueToSize {
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
 
-                Pattern operatorPattern = Pattern.compile("--|\\+\\+|==|-=|\\+=|\\*=|/=|&&|&=|%=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|>=|<=|\\|\\||!|\\||\\^|~|<<|>>|<<<|>>>|->|\\.|::");
+                Pattern operatorPattern = Pattern.compile("--|\\+\\+|==|-=|<<|>>|<<<|>>>|->|\\+=|\\*=|/=|&&|&=|%=|>=|<=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|\\|\\||!|\\||\\^|~|\\.|::");
                 match = operatorPattern.matcher(data);
                 while (match.find()){
                     //System.out.println("Operators  :" + match );
@@ -80,17 +80,22 @@ public class CodeComplexDueToSize {
                     //System.out.println("String Keywords  :" + match.group() );
                     readWords.add(match.group());
                 }
+
+//                Pattern methodPattern = Pattern.compile("\b(public|private|internal|protected)\s*" + "\b(static|virtual|abstract)?\s*[a-zA-Z]*(?<method>\s[a-zA-Z]+\s*)" + @"\((([a-zA-Z\[\]\<\>]*\s*[a-zA-Z]*\s*)[,]?\s*)+\)");
+//                match = methodPattern.matcher(data);
+//                while (match.find()){
+//                    System.out.println("String Keywords  :" + match.group() );
+//                }
             }
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-        System.out.println(readWords);
+
         readWords.retainAll(keywords);
         int keywordsCount = readWords.size();
-        System.out.println(readWords);
-        System.out.println(keywordsCount);
-        return new int[] {opCount,nuVlCount,strLtCount};
+
+        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount};
     }
 
 }

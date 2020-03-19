@@ -9,9 +9,7 @@
     <list default="true" id="28cccb79-c88f-4179-8420-fad30af2e2fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CodeComplexDueToSize">
+  <component name="RunManager" selected="Application.test">
     <configuration name="CodeComplexDueToSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodeComplexDueToSize" />
       <module name="Code Complexity Analyzer" />
@@ -141,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.controller" />
         <item itemvalue="Application.FileReader" />
@@ -183,7 +181,7 @@
       <updated>1584419285682</updated>
       <workItem from="1584419311450" duration="5089000" />
       <workItem from="1584557176119" duration="5219000" />
-      <workItem from="1584593842374" duration="34117000" />
+      <workItem from="1584593842374" duration="36623000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -219,22 +217,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1584645622817">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1584648406414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584645622817" />
-    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1584645622817">
+    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584648406414" />
+    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1584648406414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584645622817" />
-    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1584645622817">
+    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584648406414" />
+    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1584648406414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584645622817" />
-    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1584645622817">
+    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584648406414" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1584648406414">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584645622817" />
+    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584648406414" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584603229077">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

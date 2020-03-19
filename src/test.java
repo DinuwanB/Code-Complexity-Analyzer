@@ -1,10 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class test {
     public static void main(String[] args) {
@@ -22,6 +21,14 @@ public class test {
                 "%=", "<<=", ">>=", "^="
         ));
 
+        test cls = new test();
+        Class c = cls.getClass();
+
+        Method[] m = c.getDeclaredMethods();
+        for(int i = 0; i < m.length; i++) {
+            System.out.println("method = " + m[i].toString());
+        }
+
 
         try {
             File readData = new File("../Dinu/dinu.txt");
@@ -30,33 +37,7 @@ public class test {
                 String data = myReader.nextLine();
 //                System.out.println("-----------------------------  " +data);
                 readWords.add(data);
-                CharSequence cs = readWords.toString();
-                //System.out.println(cs);
-                Matcher mt;
 
-                Pattern p = Pattern.compile("\"(.*?)\"");
-                mt = p.matcher(data);
-                while (mt.find()) {
-                     System.out.println("What is this : "+ mt);
-                }
-
-                Pattern p2 = Pattern.compile("\\d+");
-                mt = p2.matcher(data);
-                int count = 0;
-                while (mt.find()) {
-
-                    // System.out.println("Find num  :"+ mt );
-                }
-                /**/
-
-
-                Pattern p3 = Pattern.compile("--|\\+\\+|==|-=|\\+=|\\*=|/=|&&|&=|%=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|>=|<=|\\|\\||!|\\||\\^|~|<<|>>|<<<|>>>|->|\\.|::");
-                mt = p3.matcher(data);
-                count = 0;
-                while (mt.find()) {
-                   // System.out.println("Find 3  :" + mt );
-                }
-                //System.out.println(readWords );
             }
 
         } catch (FileNotFoundException e) {
@@ -64,9 +45,7 @@ public class test {
             e.printStackTrace();
         }
 
-        //numbersCount(readWords);
-        //my1(readWords,keywords);
-        //my2(readWords,operators);
+
 
 
 
