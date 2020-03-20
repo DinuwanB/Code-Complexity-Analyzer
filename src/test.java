@@ -1,36 +1,15 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class test {
     public static void main(String[] args) {
         ArrayList<String> readWords = new ArrayList<String>();
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
-        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
-                "abstract","assert","break" ,"class" ,"continue" ,"default" ,"enum", "extends" ,"final" ,
-                "finally" ,"implements" ,"import" ,"instanceof" ,"instanceof" ,"interface", "native", "new", "null" ,
-                "package", "private" ,"protected" ,"public", "return" ,"static" ,"strictfp" ,"super" ,"synchronized",
-                "this", "throw" , "throws" ,"transient" ,"try" ,"void" ,"volatile", "else","catch", "true", "else", "default", "return", "null", "this"
-        ));
-        ArrayList<String> operators = new ArrayList<String>(Arrays.asList(
-                "+", "-", "*", "/", "%", "++", "--", "==", "!=", ">", "<", ">=", "<=", "&&", "||", "!",  "|", "^",
-                "~", "<<", ">>", ">>>", "<<<" , "->", ".", "::", "+=", "-=", "*=", "/=", "=", ">>>=", "|=", "&=" ,
-                "%=", "<<=", ">>=", "^="
-        ));
-
-        test cls = new test();
-        Class c = cls.getClass();
-
-        Method[] m = c.getDeclaredMethods();
-        for(int i = 0; i < m.length; i++) {
-            System.out.println("method = " + m[i].toString());
-        }
-
-
         try {
+            Matcher match;
             File readData = new File("../Dinu/dinu.txt");
             Scanner myReader = new Scanner(readData);
             while (myReader.hasNextLine()) {
@@ -38,18 +17,26 @@ public class test {
 //                System.out.println("-----------------------------  " +data);
                 readWords.add(data);
 
+                Pattern classObject = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\(\\)");
+                match = classObject.matcher(data);
+                while (match.find()){
+                    System.out.println("String Keywords  :" + match.group() );
+                    readWords.add(match.group());
+                }
+
+                Pattern classPattern = Pattern.compile("(class)+.[a-zA-Z]+");
+                match = classPattern.matcher(data);
+                while (match.find()){
+                    System.out.println("String Keywords  :" + match.group() );
+                    readWords.add(match.group());
+                }
+
             }
 
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-
-
-
-
-
     }
 
     public static void my1(ArrayList<String> readwords, ArrayList<String> keywords){
