@@ -3,22 +3,21 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class test {
     public static void main(String[] args) {
         ArrayList<String> readWords = new ArrayList<String>();
-
         int classcount = 0;
         try {
             Matcher match;
             File readData = new File("../Dinu/dinu.txt");
             Scanner myReader = new Scanner(readData);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-//                System.out.println("-----------------------------  " +data);
-                readWords.add(data);
-
+            while (myReader.hasNext()) {
+                String data = myReader.next();
+                //System.out.println(data);
+                if (data == "for"){
+                    System.out.println("found");
+                }
 //       added         Pattern classObject = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\(\\)");
 //                match = classObject.matcher(data);
 //                while (match.find()){
@@ -41,14 +40,18 @@ public class test {
 //                    System.out.println("String Keywords  :" + match.group() );
 //                }
 
-                Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
-                match = method.matcher(data);
-                while (match.find()){
-                    System.out.println("String Keywords  :" + match.group() );
-                    readWords.add(match.group());
-                }
+//                Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
+//                match = method.matcher(data);
+//                while (match.find()){
+//                    System.out.println("String Keywords  :" + match.group() );
+//                    readWords.add(match.group());
+//                }
+//                Pattern idnConStruPattern = Pattern.compile("(for).");
+//                match = idnConStruPattern.matcher(data);
+//                while (match.find()){
+//                    System.out.println(match.group());
+//                }
             }
-
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
@@ -72,11 +75,8 @@ public class test {
 
 }
 
-class Car{
-    public static void main(String[]args){
 
-        }
-        }
+
 
 
 

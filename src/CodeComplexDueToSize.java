@@ -8,9 +8,7 @@ import java.util.regex.Pattern;
 public class CodeComplexDueToSize {
     public static  void main(String[] args) {
         String filePath = "../Dinu/dinu.txt" ;
-        ArrayList<String> keywordsAnalyzer = new ArrayList<String>();
 
-        //keywordsAnalyzer  = ReadClass(filePath);
         int result[] = operatorsans(filePath);
 
 
@@ -18,6 +16,8 @@ public class CodeComplexDueToSize {
         System.out.println("Numerical Value Result  : "+ result[1]);
         System.out.println("String Literal Result  : "+ result[2]);
         System.out.println("Keywords Result  : "+ result[3]);
+        System.out.println("Class Result  : "+ result[4]);
+        System.out.println("Method Result   : "+ result[5]);
     }
 
     public static ArrayList<String> ReadClass(String filePath) {
@@ -27,7 +27,11 @@ public class CodeComplexDueToSize {
             Scanner myReader = new Scanner(readData);
             while (myReader.hasNextLine()) {
                 String data = myReader.next();
-                readWords.add(data);
+                if(data == "for"){
+                    readWords.add(data);
+                }
+                System.out.println(readWords);
+
             }
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
@@ -85,21 +89,21 @@ public class CodeComplexDueToSize {
                 Pattern classObjectDefined = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\([\\w]*?\\)");
                 match = classObjectDefined.matcher(data);
                 while (match.find()){
-                    //System.out.println("Defined Object of Class   :" + match.group() );
+                    System.out.println("Defined Object of Class   :" + match.group() );
                     classDefObjCount++;
                 }
 
                 Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+|System|out|println|print");
                 match = classNamePattern.matcher(data);
                 while (match.find()){
-                    //System.out.println("Class  :" + match.group() );
+                    System.out.println("Class  :" + match.group() );
                     classCount++;
                 }
 
                 Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
                 match = method.matcher(data);
                 while (match.find()){
-                    //System.out.println("Method Count  :" + match.group() );
+                    System.out.println("Method Count  :" + match.group() );
                     methodCount++;
                 }
             }
@@ -108,7 +112,9 @@ public class CodeComplexDueToSize {
             e.printStackTrace();
         }
 
-        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount};
+        int methodsNum = methodCount - classDefObjCount;
+
+        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodsNum};
     }
 
 }

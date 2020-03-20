@@ -62,7 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CodeComplexDueToSize">
+  <component name="RunManager" selected="Application.test">
     <configuration name="CodeComplexDueToSize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodeComplexDueToSize" />
       <module name="Code Complexity Analyzer" />
@@ -139,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.controller" />
         <item itemvalue="Application.FileReader" />
@@ -182,7 +182,7 @@
       <workItem from="1584419311450" duration="5089000" />
       <workItem from="1584557176119" duration="5219000" />
       <workItem from="1584593842374" duration="37152000" />
-      <workItem from="1584675794801" duration="17961000" />
+      <workItem from="1584675794801" duration="26519000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -218,22 +218,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom" timestamp="1584703971926">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1584726145684">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584703971926" />
-    <state width="1323" height="211" key="GridCell.Tab.0.center" timestamp="1584703971925">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584726145684" />
+    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1584726145683">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584703971925" />
-    <state width="1323" height="211" key="GridCell.Tab.0.left" timestamp="1584703971924">
+    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584726145683" />
+    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1584726145683">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584703971924" />
-    <state width="1323" height="211" key="GridCell.Tab.0.right" timestamp="1584703971925">
+    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584726145683" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1584726145683">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="211" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584703971925" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584726145683" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584651032849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -286,17 +286,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584629144498" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CodeComplexDueToSize.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/code$CodeComplexDueToSize.ic" NAME="CodeComplexDueToSize Coverage Results" MODIFIED="1584444846311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
