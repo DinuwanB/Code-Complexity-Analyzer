@@ -24,8 +24,8 @@ public class test {
                     readWords.add(match.group());
                 }
 
-                Pattern classPattern = Pattern.compile("(class)+.[a-zA-Z]+");
-                match = classPattern.matcher(data);
+                Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+");
+                match = classNamePattern.matcher(data);
                 while (match.find()){
                     System.out.println("String Keywords  :" + match.group() );
                     readWords.add(match.group());
