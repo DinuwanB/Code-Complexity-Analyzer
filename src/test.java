@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 public class test {
     public static void main(String[] args) {
         ArrayList<String> readWords = new ArrayList<String>();
+
+        int classcount = 0;
         try {
             Matcher match;
             File readData = new File("../Dinu/dinu.txt");
@@ -17,20 +19,34 @@ public class test {
 //                System.out.println("-----------------------------  " +data);
                 readWords.add(data);
 
-                Pattern classObject = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\(\\)");
-                match = classObject.matcher(data);
+//       added         Pattern classObject = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\(\\)");
+//                match = classObject.matcher(data);
+//                while (match.find()){
+//                    System.out.println("String Keywords  :" + match.group() );
+//                    readWords.add(match.group());
+//                }
+
+//                Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+|System|out|println|print");
+//                match = classNamePattern.matcher(data);
+//                while (match.find()){
+//                    System.out.println("String Keywords  :" + match.group() );
+//                    readWords.add(match.group());
+//                    System.out.println("Class  :"+ (++classcount) );
+//
+//                }
+
+//                Pattern methodPattern = Pattern.compile("\\b(public|private|internal|protected)\\s*" + "\\b(static|virtual|abstract)?\\s*[a-zA-Z]*(?<method>\\s[a-zA-Z]+\\s*)+");
+//                match = methodPattern.matcher(data);
+//                while (match.find()){
+//                    System.out.println("String Keywords  :" + match.group() );
+//                }
+
+                Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
+                match = method.matcher(data);
                 while (match.find()){
                     System.out.println("String Keywords  :" + match.group() );
                     readWords.add(match.group());
                 }
-
-                Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+");
-                match = classNamePattern.matcher(data);
-                while (match.find()){
-                    System.out.println("String Keywords  :" + match.group() );
-                    readWords.add(match.group());
-                }
-
             }
 
         } catch (FileNotFoundException e) {
@@ -55,6 +71,12 @@ public class test {
 
 
 }
+
+class Car{
+    public static void main(String[]args){
+
+        }
+        }
 
 
 

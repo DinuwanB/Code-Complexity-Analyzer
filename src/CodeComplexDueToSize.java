@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,13 +37,15 @@ public class CodeComplexDueToSize {
     }
 
     public static int[] operatorsans(String filePath){
-        ArrayList<String> readWords = new ArrayList<>();
-        ArrayList<String> keywords = new ArrayList<String>(Arrays.asList(
-                "abstract", "assert", "break", "break", "class", "continue", "default", "enum", "extends", "final", "finally", "implements", "import", "instanceof", "instanceof", "interface", "native", "new", "null", "package", "private", "protected", "public", "return", "static", "strictfp", "super", "synchronized", "this", "throw", "throws", "transient", "try", "void", "volatile", "else"
-        ));
+
         int opCount = 0;
         int nuVlCount = 0;
         int strLtCount = 0;
+        int keywordsCount = 0;
+        int classDefObjCount = 0;
+        int classCount = 0;
+        int methodCount = 0;
+
         try {
             File readData = new File(filePath);
             Scanner myReader = new Scanner(readData);
@@ -74,26 +75,38 @@ public class CodeComplexDueToSize {
                     strLtCount++;
                 }
 
-                Pattern keywordsPattern = Pattern.compile("[a-zA-Z]+");
+                Pattern keywordsPattern = Pattern.compile("abstract|assert|break|class|continue|default|enum|extends|final|finally|implements|import|instanceof|interface|native|new|null|package|private|protected|public|return|static|strictfp|super|synchronized|this|throw|throws|transient|try|void|volatile|else");
                 match = keywordsPattern.matcher(data);
                 while (match.find()){
                     //System.out.println("String Keywords  :" + match.group() );
-                    readWords.add(match.group());
+                    ++keywordsCount;
                 }
 
-//                Pattern methodPattern = Pattern.compile("\b(public|private|internal|protected)\s*" + "\b(static|virtual|abstract)?\s*[a-zA-Z]*(?<method>\s[a-zA-Z]+\s*)" + @"\((([a-zA-Z\[\]\<\>]*\s*[a-zA-Z]*\s*)[,]?\s*)+\)");
-//                match = methodPattern.matcher(data);
-//                while (match.find()){
-//                    System.out.println("String Keywords  :" + match.group() );
-//                }
+                Pattern classObjectDefined = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\([\\w]*?\\)");
+                match = classObjectDefined.matcher(data);
+                while (match.find()){
+                    //System.out.println("Defined Object of Class   :" + match.group() );
+                    classDefObjCount++;
+                }
+
+                Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+|System|out|println|print");
+                match = classNamePattern.matcher(data);
+                while (match.find()){
+                    //System.out.println("Class  :" + match.group() );
+                    classCount++;
+                }
+
+                Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
+                match = method.matcher(data);
+                while (match.find()){
+                    //System.out.println("Method Count  :" + match.group() );
+                    methodCount++;
+                }
             }
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-        readWords.retainAll(keywords);
-        int keywordsCount = readWords.size();
 
         return new int[] {opCount,nuVlCount,strLtCount,keywordsCount};
     }
