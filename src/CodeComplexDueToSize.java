@@ -111,9 +111,7 @@ public class CodeComplexDueToSize {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
         int methodsNum = methodCount - classDefObjCount;
-
         return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodsNum};
     }
 
