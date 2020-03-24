@@ -15,33 +15,13 @@ public class test {
         System.out.println("Numerical Value Result  : "+ result[1]);
         System.out.println("String Literal Result  : "+ result[2]);
         System.out.println("Keywords Result  : "+ result[3]);
-        System.out.println("Identifiers  : "+ (result[4]+result[5]));
+        System.out.println("Identifiers  : "+ (result[4]+result[5]+result[6]));
         System.out.println("----------------------------------------------------------");
         System.out.println("Class Result  : "+ result[4]);
         System.out.println("Method Result   : "+ result[5]);
+        System.out.println("Method Result   : "+ result[6]);
 
     }
-
-    public static ArrayList<String> ReadClass(String filePath) {
-        ArrayList<String> readWords = new ArrayList<String>();
-        try {
-            File readData = new File(filePath);
-            Scanner myReader = new Scanner(readData);
-            while (myReader.hasNextLine()) {
-                String data = myReader.next();
-                if(data == "for"){
-                    readWords.add(data);
-                }
-                System.out.println(readWords);
-
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-        return readWords;
-    }
-
     public static int[] operatorsans(String filePath){
 
         int opCount = 0;
@@ -51,10 +31,10 @@ public class test {
         int classDefObjCount = 0;
         int classCount = 0;
         int methodCount = 0;
+        int inForLoopVariablesCount = 0;
         String dinu = "";
-
+        ArrayList<String> readWords = new ArrayList<String>();
         ArrayList<String> iden = new ArrayList<>();
-        String[] arrayw;
         Matcher match;
         try {
             File readData = new File(filePath);
@@ -63,6 +43,7 @@ public class test {
 
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
+                readWords.add(data);
 //---------------------------------------------------------------------------------------------------------------------- Operators
                 Pattern operatorPattern = Pattern.compile("--|\\+\\+|==|-=|<<|>>|<<<|>>>|->|\\+=|\\*=|/=|&&|&=|%=|>=|<=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|\\|\\||!|\\||\\^|~|\\.|::");
                 match = operatorPattern.matcher(data);
@@ -113,20 +94,13 @@ public class test {
                     System.out.println("Method Count  :" + match.group() );
                     methodCount++;
                 }
-//                Pattern forLoopIdentifire = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);|println|print");
-//                match = method.matcher(data);
-//                while (match.find()){
-//                    System.out.println("Method Count  :" + match.group() );
-//                    methodCount++;
-//                }
+
                 Pattern idnConStruPattern = Pattern.compile("(for).+");
                 match = idnConStruPattern.matcher(data);
                 while (match.find()){
                     dinu = match.group();
                     iden.add(dinu);
                 }
-
-
             }
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
@@ -134,18 +108,29 @@ public class test {
         }
 //        System.out.println("iden     "+iden);
 //        System.out.println( "dinu     "+ dinu);
+
+        ArrayList<String> identWords = new ArrayList<String>();
         for (int counter = 0; counter < iden.size(); counter++) {
-            System.out.println(iden.get(counter));
+
             Pattern identifyinsideofForloopVariables = Pattern.compile("[a-zA-Z]+");
             match = identifyinsideofForloopVariables.matcher(iden.get(counter));
             while (match.find()){
                 System.out.println("Keys ----  " +match.group());
+                String words = match.group();
+                identWords.add(words);
             }
+            identWords.remove("for");
+            identWords.remove("int");
+
         }
 
+        System.out.println(identWords);
+
+        inForLoopVariablesCount = identWords.size();
+        System.out.println(identWords);
 
         //int methodsNum = methodCount - classDefObjCount;
-        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodCount,};
+        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodCount,inForLoopVariablesCount};
     }
 
 }
