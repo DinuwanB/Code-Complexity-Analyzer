@@ -15,7 +15,7 @@ Measuring the complexity of a program statement due to size
 
 ```bash
 Measuring the complexity of a program statement due to size 
-        # An identifier    **---
+        # An identifier    ***--
 
 Measuring the complexity of a program statement due to variables
         # Variable scope                 -----
