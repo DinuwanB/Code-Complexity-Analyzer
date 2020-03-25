@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28cccb79-c88f-4179-8420-fad30af2e2fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToMethods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -191,7 +193,8 @@
       <workItem from="1584903147784" duration="1233000" />
       <workItem from="1584983102746" duration="2277000" />
       <workItem from="1585033545991" duration="15228000" />
-      <workItem from="1585080650229" duration="1171000" />
+      <workItem from="1585080650229" duration="2239000" />
+      <workItem from="1585157618990" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -219,6 +222,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1585076587694" />
+    <state x="451" y="194" key="#com.intellij.tools.ToolEditorDialog" timestamp="1585082475535">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="451" y="194" key="#com.intellij.tools.ToolEditorDialog/0.0.1366.728@0.0.1366.728" timestamp="1585082475534" />
     <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1584561981638">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -231,22 +238,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1585082258702">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1585083942615">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585082258702" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1585082258701">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585083942615" />
+    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1585083942614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585082258701" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1585082258701">
+    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585083942614" />
+    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1585083942614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585082258701" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1585082258702">
+    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585083942614" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1585083942615">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585082258702" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585083942615" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584651032849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -279,14 +286,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="905" height="179" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1584450086714" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1584594098859">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1585082637475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584594098859" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1585081570467">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585082637475" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1585157806859">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585081570467" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585157806859" />
     <state x="413" y="129" key="extract.method.dialog" timestamp="1584602521715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
