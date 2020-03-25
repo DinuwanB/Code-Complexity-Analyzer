@@ -21,6 +21,10 @@ public class CodeComplexDueToMethods {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+        System.out.println("An error occurred.");
+        System.out.println("An error occurred.");
+        System.out.println("An error occurred.");
+        System.out.println("An error occurred.");
         return null;
     }
 }
