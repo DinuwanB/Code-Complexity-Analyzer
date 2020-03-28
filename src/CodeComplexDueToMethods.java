@@ -22,14 +22,14 @@ public class CodeComplexDueToMethods {
                 Pattern primitiveReturnType = Pattern.compile(".(String|int|long|double|float|boolean|char)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
                 match = primitiveReturnType.matcher(data);
                 while (match.find()){
-                    System.out.println("Method Count  :" + match.group() );
+                    System.out.println("primitiveReturnType Method Count  :" + match.group() );
 
                 }
 
-                Pattern compositeReturnType = Pattern.compile(".(String|int|long|double|float|boolean|char)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
-                match = compositeReturnType.matcher(data);
+                Pattern compositeReturnType = Pattern.compile(".(List<[a-zA-Z]+>|ArrayList<[a-zA-Z]+>|double\\[\\]|int\\[\\]|String\\[\\]|long\\[\\]|float\\[\\]|boolean\\[\\]|char\\[\\]+)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
+                match = compositeReturnType  .matcher(data);
                 while (match.find()){
-                    System.out.println("Method Count  :" + match.group() );
+                    System.out.println("compositeReturnType Method Count  :" + match.group() );
 
                 }
 
