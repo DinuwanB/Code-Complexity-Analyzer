@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +199,7 @@
       <workItem from="1585157618990" duration="1373000" />
       <workItem from="1585160259823" duration="2083000" />
       <workItem from="1585419254439" duration="3440000" />
-      <workItem from="1585422866557" duration="3234000" />
+      <workItem from="1585422866557" duration="7101000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -253,22 +254,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1585426111161">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1585430331805">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585426111161" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1585426111161">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585430331805" />
+    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1585430331805">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585426111161" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1585426111161">
+    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585430331805" />
+    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1585430331804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585426111161" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1585426111161">
+    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585430331804" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1585430331805">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585426111161" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585430331805" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584651032849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

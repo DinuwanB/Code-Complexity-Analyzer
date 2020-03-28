@@ -9,6 +9,8 @@ public class CodeComplexDueToMethods {
         String filePath = "../Dinu/dinu.txt" ;
 
         int result[] = MethodController(filePath);
+
+
     }
     public static int[] MethodController(String filePath) {
 
@@ -33,12 +35,19 @@ public class CodeComplexDueToMethods {
 
                 }
 
+                Pattern getMethodLine = Pattern.compile("public.+(void).+");
+                match = getMethodLine.matcher(data);
+                while (match.find()){
+                    System.out.println("222  :" + match.group() );
+                }
+
             }
 
         }catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+
         return null;
     }
 }

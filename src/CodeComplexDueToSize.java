@@ -79,14 +79,14 @@ public class CodeComplexDueToSize {
                 Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+|System|out");
                 match = classNamePattern.matcher(data);
                 while (match.find()){
-                    System.out.println("Class  :" + match.group() );
+                   // System.out.println("Class  :" + match.group() );
                     classCount++;
                 }
 
                 Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);|println|print");
                 match = method.matcher(data);
                 while (match.find()){
-                    System.out.println("Method Count  :" + match.group() );
+                    //System.out.println("Method Count  :" + match.group() );
                     methodCount++;
                 }
 
@@ -111,7 +111,10 @@ public class CodeComplexDueToSize {
             }
             identWords.remove("for");
             identWords.remove("int");
+            identWords.remove("double");
+            identWords.remove("long");
         }
+        System.out.println("123-  "+identWords);
         int inForLoopVariablesCount = identWords.size();
 
        // int methodsNum = methodCount - classDefObjCount;
