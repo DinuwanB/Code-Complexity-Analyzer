@@ -11,9 +11,9 @@ Measuring the complexity of a program statement due to size
         String literal   *****
         
  Measuring the complexity of a program due to methods
-        # Method return type             *****
-        # Primitive data type parameters *****
-        # Composite data type parameters *****
+         Method return type             *****
+         Primitive data type parameters *****
+         Composite data type parameters *****
 
 ```
 ## TODO
