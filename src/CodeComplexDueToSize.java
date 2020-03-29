@@ -32,6 +32,7 @@ public class CodeComplexDueToSize {
         String varData = "";
 
         ArrayList<String> identifiresofforloop = new ArrayList<String>();
+        ArrayList<String> insideprintSt = new ArrayList<String>();
 
         Matcher match;
 
@@ -83,7 +84,7 @@ public class CodeComplexDueToSize {
                     classCount++;
                 }
 
-                Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);|println|print");
+                Pattern method = Pattern.compile(".(void)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);|println|print");
                 match = method.matcher(data);
                 while (match.find()){
                     //System.out.println("Method Count  :" + match.group() );
@@ -95,6 +96,12 @@ public class CodeComplexDueToSize {
                 while (match.find()){
                     varData = match.group();
                     identifiresofforloop.add(varData);
+                }
+
+                Pattern getMethodLine = Pattern.compile("(print|println)+\\(.+\\)");
+                match = getMethodLine.matcher(data);
+                while (match.find()){
+                    insideprintSt.add(match.group());
                 }
             }
         } catch (FileNotFoundException e) {
@@ -114,11 +121,25 @@ public class CodeComplexDueToSize {
             identWords.remove("double");
             identWords.remove("long");
         }
-        System.out.println("123-  "+identWords);
+//        System.out.println("+++++++ "+identWords);
+//        System.out.println("+++++++ "+insideprintSt);
+        ArrayList<String> insidepri = new ArrayList<String>();
+        for (int count = 0; count < insideprintSt.size(); count++) {
+            Pattern insideofrint = Pattern.compile("[a-zA-Z]+");
+            match = insideofrint.matcher(insideprintSt.get(count));
+            while (match.find()) {
+                String words = match.group();
+                insidepri.add(words);
+            }
+        }
+         insidepri.retainAll(identWords);
+        int calc = insidepri.size();
+
+
         int inForLoopVariablesCount = identWords.size();
 
        // int methodsNum = methodCount - classDefObjCount;
-        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodCount,inForLoopVariablesCount};
+        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodCount,inForLoopVariablesCount+calc};
     }
 
 }
