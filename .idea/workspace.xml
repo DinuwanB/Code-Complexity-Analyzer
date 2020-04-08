@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28cccb79-c88f-4179-8420-fad30af2e2fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeComplexDueToSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Code Complexity Analyzer/CodeComplexDueToSize.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CodeComplexDueToSize">
+  <component name="RunManager" selected="Application.CodeComplexDueToVariables">
     <configuration name="CodeComplexDueToMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CodeComplexDueToMethods" />
       <module name="Code Complexity Analyzer" />
@@ -84,15 +84,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileReader" />
+    <configuration name="CodeComplexDueToVariables" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CodeComplexDueToVariables" />
       <module name="Code Complexity Analyzer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller" />
+    <configuration name="FileReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FileReader" />
       <module name="Code Complexity Analyzer" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CodeComplexDueToVariables" />
         <item itemvalue="Application.CodeComplexDueToSize" />
         <item itemvalue="Application.CodeComplexDueToMethods" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.CodeComplexDueToSize" />
-        <item itemvalue="Application.controller" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +198,10 @@
       <workItem from="1585160259823" duration="2083000" />
       <workItem from="1585419254439" duration="3440000" />
       <workItem from="1585422866557" duration="7101000" />
-      <workItem from="1585461730292" duration="12950000" />
+      <workItem from="1585461730292" duration="13674000" />
+      <workItem from="1586257224646" duration="2799000" />
+      <workItem from="1586351196225" duration="597000" />
+      <workItem from="1586367333965" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="numbers pattern add">
       <created>1584561984107</created>
@@ -253,22 +256,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="505" y="279" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1584426040181" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1585484483736">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1586369261630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585484483736" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1585484483736">
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586369261630" />
+    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1586369261629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585484483736" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1585484483736">
+    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586369261629" />
+    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1586369261629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585484483736" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1585484483736">
+    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586369261629" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1586369261630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585484483736" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586369261630" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1584651032849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -305,10 +308,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585163014517" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1585461736948">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1586367393511">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585461736948" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586367393511" />
     <state x="413" y="129" key="extract.method.dialog" timestamp="1584602521715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
