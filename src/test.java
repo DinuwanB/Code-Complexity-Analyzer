@@ -1,136 +1,114 @@
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class test {
-    public static  void main(String[] args) {
+    public static void main(String[] args){
         String filePath = "../Dinu/dinu.txt" ;
 
-        int result[] = operatorsans(filePath);
-
-        System.out.println("----------------------------------------------------------");
-        System.out.println("Operators Result  : "+ result[0]);
-        System.out.println("Numerical Value Result  : "+ result[1]);
-        System.out.println("String Literal Result  : "+ result[2]);
-        System.out.println("Keywords Result  : "+ result[3]);
-        System.out.println("Identifiers  : "+ (result[4]+result[5]+result[6]));
-        System.out.println("----------------------------------------------------------");
-        System.out.println("Class Result  : "+ result[4]);
-        System.out.println("Method Result   : "+ result[5]);
-        System.out.println("Method Result   : "+ result[6]);
+        int result[] = MethodController(filePath);
+        System.out.println("Primitive Return Methods  : "+ result[0]);
+        System.out.println("Composite Return Methods  : "+ result[1]);
+        System.out.println("Primitive Parameters  : "+ result[2]);
+        System.out.println("Composite Parameters  : "+ result[3]);
 
     }
-    public static int[] operatorsans(String filePath){
+    public static int[] MethodController(String filePath) {
 
-        int opCount = 0;
-        int nuVlCount = 0;
-        int strLtCount = 0;
-        int keywordsCount = 0;
-        int classDefObjCount = 0;
-        int classCount = 0;
-        int methodCount = 0;
-        int inForLoopVariablesCount = 0;
-        String dinu = "";
-        ArrayList<String> readWords = new ArrayList<String>();
-        ArrayList<String> iden = new ArrayList<>();
+        String methData = "";
+        String forData = "";
+        int primativeReCount = 0;
+        int compositeReCount = 0;
+
+        ArrayList<String> identifyMethodsLine = new ArrayList<String>();
+        ArrayList<String> identifyForLine = new ArrayList<String>();
+        ArrayList<String> primativeTypes = new ArrayList<String>(Arrays.asList("int","long","double","float","boolean","String"));
+        ArrayList<String> compositeTypes = new ArrayList<String>(Arrays.asList("int[]","long[]","double[]","float[]","boolean[]","String[]"));
+        ArrayList<String> forWords = new ArrayList<String>();
+        ArrayList<String> identMethWords = new ArrayList<String>();
+        ArrayList<String> identMethWords2 = new ArrayList<String>();
+
+
         Matcher match;
         try {
             File readData = new File(filePath);
             Scanner myReader = new Scanner(readData);
-
-
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                readWords.add(data);
-//---------------------------------------------------------------------------------------------------------------------- Operators
-                Pattern operatorPattern = Pattern.compile("--|\\+\\+|==|-=|<<|>>|<<<|>>>|->|\\+=|\\*=|/=|&&|&=|%=|>=|<=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|\\|\\||!|\\||\\^|~|\\.|::");
-                match = operatorPattern.matcher(data);
-                while (match.find()){
-                    //System.out.println("Operators  :" + match );
-                    opCount++;
+                if (data.contains("//")) {
+                    continue;
                 }
-//---------------------------------------------------------------------------------------------------------------------- Numerical
-                Pattern numericalPattern = Pattern.compile("\\d+(\\.\\d+)?");
-                match = numericalPattern.matcher(data);
+                Pattern primitiveReturnType = Pattern.compile(".(String|int|long|double|float|boolean|char)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
+                match = primitiveReturnType.matcher(data);
                 while (match.find()){
-                    //System.out.println("Numerical Values  :" + match );
-                    nuVlCount++;
-                }
-//---------------------------------------------------------------------------------------------------------------------- String Literals
-                Pattern strLiteralPattern = Pattern.compile("\"(.*?)\"");
-                match = strLiteralPattern.matcher(data);
-                while (match.find()){
-                    //System.out.println("String Literal  :" + match );
-                    strLtCount++;
-                }
-//---------------------------------------------------------------------------------------------------------------------- Keywords
-                Pattern keywordsPattern = Pattern.compile("abstract|assert|break|class|continue|default|enum|extends|final|finally|implements|import|instanceof|interface|native|new|null|package|private|protected|public|return|static|strictfp|super|synchronized|this|throw|throws|transient|try|void|volatile|else");
-                match = keywordsPattern.matcher(data);
-                while (match.find()){
-                    //System.out.println("String Keywords  :" + match.group() );
-                    ++keywordsCount;
-                }
-//---------------------------------------------------------------------------------------------------------------------- Identifiers
-//---------------------------------------------------------------------------------------------------------------------- class Object
-                Pattern classObjectDefined = Pattern.compile("[^a-zA-Z]+.([\\w_-]+).=.new.[a-zA-Z]+\\([\\w]*?\\)");
-                match = classObjectDefined.matcher(data);
-                while (match.find()){
-                    System.out.println("Defined Object of Class   :" + match.group() );
-                    classDefObjCount++;
-                }
-//---------------------------------------------------------------------------------------------------------------------- Class
-                Pattern classNamePattern = Pattern.compile("(class)+.[a-zA-Z]+|System|out");
-                match = classNamePattern.matcher(data);
-                while (match.find()){
-                    System.out.println("Class  :" + match.group() );
-                    classCount++;
-                }
-//---------------------------------------------------------------------------------------------------------------------- Methods
-                Pattern method = Pattern.compile(".(void|String|int|long|double|float|boolean)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);|println|print");
-                match = method.matcher(data);
-                while (match.find()){
-                    System.out.println("Method Count  :" + match.group() );
-                    methodCount++;
+                    //System.out.println("primitiveReturnType Method Count  :" + match.group() );
+                    primativeReCount++;
                 }
 
-                Pattern idnConStruPattern = Pattern.compile("(for).+");
-                match = idnConStruPattern.matcher(data);
+                Pattern compositeReturnType = Pattern.compile(".(List<[a-zA-Z]+>|ArrayList<[a-zA-Z]+>|double\\[\\]|int\\[\\]|String\\[\\]|long\\[\\]|float\\[\\]|boolean\\[\\]|char\\[\\]+)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
+                match = compositeReturnType  .matcher(data);
                 while (match.find()){
-                    dinu = match.group();
-                    iden.add(dinu);
+                    //System.out.println("compositeReturnType Method Count  :" + match.group() );
+                    compositeReCount++;
                 }
+
+                Pattern getMethodLine = Pattern.compile("\\(.+\\)");
+                match = getMethodLine.matcher(data);
+                while (match.find()){
+                    methData = match.group();
+                    identifyMethodsLine.add(methData);
+                    // System.out.println(identifyMethodsLine);
+                }
+
+                Pattern getVarInForLoop = Pattern.compile("(for).+");
+                match = getVarInForLoop.matcher(data);
+                while (match.find()){
+                    forData = match.group();
+                    identifyForLine.add(forData);
+                }
+
             }
-        } catch (FileNotFoundException e) {
+
+        }catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-//        System.out.println("iden     "+iden);
-//        System.out.println( "dinu     "+ dinu);
 
-        ArrayList<String> identWords = new ArrayList<String>();
-        for (int counter = 0; counter < iden.size(); counter++) {
-
+        for (int counter = 0; counter < identifyForLine.size(); counter++) {
             Pattern identifyinsideofForloopVariables = Pattern.compile("[a-zA-Z]+");
-            match = identifyinsideofForloopVariables.matcher(iden.get(counter));
+            match = identifyinsideofForloopVariables.matcher(identifyForLine.get(counter));
             while (match.find()){
-                System.out.println("Keys ----  " +match.group());
                 String words = match.group();
-                identWords.add(words);
+                forWords.add(words);
             }
-            identWords.remove("for");
-            identWords.remove("int");
-
         }
+        forWords.retainAll(primativeTypes);
+        int forLoop = forWords.size();
 
-        System.out.println(identWords);
+        for (int count = 0; count < identifyMethodsLine.size(); count++) {
+            Pattern insideofMethodVariablesPramCom = Pattern.compile("[a-zA-Z]+\\[\\]");
+            match = insideofMethodVariablesPramCom.matcher(identifyMethodsLine.get(count));
+            while (match.find()){
+                String words = match.group();
+                identMethWords.add(words);
+            }
+            Pattern identifyinsideofMethodVariablesPramPri = Pattern.compile("[a-zA-Z]+");
+            match = identifyinsideofMethodVariablesPramPri.matcher(identifyMethodsLine.get(count));
+            while (match.find()){
+                String words2 = match.group();
+                identMethWords2.add(words2);
+            }
+        }
+        identMethWords.retainAll(compositeTypes);
+        int compositeCount = identMethWords.size();
+        identMethWords2.retainAll(primativeTypes);
+        int primativeCount =  identMethWords2.size();
 
-        inForLoopVariablesCount = identWords.size();
-        System.out.println(identWords);
 
-        //int methodsNum = methodCount - classDefObjCount;
-        return new int[] {opCount,nuVlCount,strLtCount,keywordsCount,classCount,methodCount,inForLoopVariablesCount};
+        return new int[] {primativeReCount,compositeReCount, primativeCount - (forLoop+1), compositeCount};
     }
-
 }
