@@ -39,7 +39,9 @@ public class CodeComplexDueToMethods {
             Scanner myReader = new Scanner(readData);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-
+                if (data.contains("//")) {
+                    continue;
+                }
                 Pattern primitiveReturnType = Pattern.compile(".(String|int|long|double|float|boolean|char)+.[a-zA-Z][a-zA-Z0-9]+\\(|[\\w_]+\\([a-zA-Z]*?\\);");
                 match = primitiveReturnType.matcher(data);
                 while (match.find()){

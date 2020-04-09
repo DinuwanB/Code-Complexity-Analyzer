@@ -41,6 +41,9 @@ public class CodeComplexDueToSize {
             Scanner myReader = new Scanner(readData);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
+                if (data.contains("//")) {
+                    continue;
+                }
 
                 Pattern operatorPattern = Pattern.compile("--|\\+\\+|==|-=|<<|>>|<<<|>>>|->|\\+=|\\*=|/=|&&|&=|%=|>=|<=|<<=|>>=|\\^=|\\+|-|=|\\*|/|%|!=|>|>>>=|\\|=|<|\\|\\||!|\\||\\^|~|\\.|::");
                 match = operatorPattern.matcher(data);

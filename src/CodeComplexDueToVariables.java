@@ -13,7 +13,14 @@ public class CodeComplexDueToVariables {
         try {
             File readData = new File(filePath);
             Scanner myReader = new Scanner(readData);
-            System.out.println("here"+myReader);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                if (data.contains("//")) {
+                    continue;
+                }
+                System.out.println(data);
+            }
+
         }
         catch (FileNotFoundException e){
             System.out.println("An error occurred.");
