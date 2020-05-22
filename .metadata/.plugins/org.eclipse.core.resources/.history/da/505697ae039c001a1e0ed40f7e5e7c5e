@@ -1,0 +1,37 @@
+<html>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<link
+	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<body>
+	<nav class="navbar navbar-dark bg-primary">
+		<div class="container">
+		<img src="/assets/img/bootstrap.svg" alt="" width="32" height="32" title="Bootstrap">
+			<a class="navbar-brand" href="#">Code Complexity Analyzer</a>
+		</div>
+		<button class="btn btn" type="submit" id="inputGroupFileAddon04">
+			<i class="fab fa-github-square">GitHub</i>
+		</button>
+
+	</nav>
+	<br>
+	<br>
+	<div class="container">
+		<form action="upload" method="POST" enctype="multipart/form-data">
+			<div class="container">
+				
+				<input type="file" name="file" /> <input type="submit" name="btn-sub"/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
