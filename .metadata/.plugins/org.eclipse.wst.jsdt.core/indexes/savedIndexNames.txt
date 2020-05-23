@@ -1,2 +1,0 @@
-INDEX VERSION 1.4+D:\Code Complexity Analyzer\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-79570037.index

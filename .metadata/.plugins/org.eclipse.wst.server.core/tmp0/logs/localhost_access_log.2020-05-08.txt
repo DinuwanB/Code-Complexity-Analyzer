@@ -1,4 +1,0 @@
-127.0.0.1 - - [08/May/2020:13:51:04 +0530] "GET / HTTP/1.1" 404 709
-0:0:0:0:0:0:0:1 - - [08/May/2020:13:51:05 +0530] "GET /ITPM/WEB-INF/classes/com/ITPM/ITPM/test.java HTTP/1.1" 404 682
-127.0.0.1 - - [08/May/2020:17:37:09 +0530] "GET / HTTP/1.1" 404 709
-0:0:0:0:0:0:0:1 - - [08/May/2020:17:37:10 +0530] "GET /ITPM/WEB-INF/classes/com/ITPM/ITPM/test.java HTTP/1.1" 404 682
